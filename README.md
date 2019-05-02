@@ -29,6 +29,16 @@ Popüler bilim konularını PUB'a taşıyarak içeriği zenginleştirebilirsin.
 ### Başka Bir Uzmanlık
 Mutlaka katkı sağlayabileceğin bir konu vardır, iletişime geçebilirsin.
 
+# Sistem Kurulumu
+- Sisteminizde Node ve MySQLServer kurulu olmalı.
+- Tüm dosyaları indiriniz.
+- Bilgisayardaki MySQL Server 'ı çalıştırıp coderhub isimli bir veri tabanı şeması oluşturun.
+- Veritabanı için local isimli, şifresi boş bir kullanıcı oluşturun.
+- dbCreate.sql dosyasını açın, bu kodları kopyalayıp çalıştırın, bu şekilde DB oluşacaktır.
+- Terminal ile indirdiğiniz klasöre gibi 'npm install' komutunu çalıştırın.
+- 'node bin/wwwcodemasterspub.js' komutu ile uygulamayı bşlatın.
+- Eğer her şey yolunda gittiyse localhost:3009 adresinden kendi bilgisayarınızda çalışan kopyaya ulaşabilirsiniz.
+
 # Katkı Sağlayanlar
 - Emre ŞURK; CMPub'ı başlattı.
 
