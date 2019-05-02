@@ -1,5 +1,6 @@
 var nodemailer = require('nodemailer');
 const jade = require('jade');
+const sensitiveDataHelper = require('./SensitiveDataHelper.js');
 
 let mailHelper = {};
 
@@ -16,7 +17,7 @@ mailHelper.sendInviteMail = async function(toEmail , inviteCode , inviterUser ){
 }
 
 mailHelper.sendMail = async function( toEmail , subject , body ){
-    var transporter = nodemailer.createTransport( mailCredits );
+    var transporter = nodemailer.createTransport( sensitiveDataHelper.mailCredits );
     var mailOptions = {
         from: '"The Admin of CodeMastersPub" <admin@codemasterspub.com>',
         to: toEmail,
@@ -32,16 +33,6 @@ mailHelper.sendMail = async function( toEmail , subject , body ){
         console.log('Email sent: ' + info.response);
         }
     });
-}
-
-const mailCredits ={
-    host: 'smtp.zoho.com',
-    port: 465,
-    secure: true, //ssl
-    auth: {
-            user:'admin@codemasterspub.com',
-            pass:'funcep-09'
-    }
 }
 
 

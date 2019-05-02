@@ -5,3 +5,7 @@
 *.vscode
 /*.vscode/*
 .vscode
+
+
+#Sensitive datas.
+/sources/Helpers/SensitiveDataHelper.js
