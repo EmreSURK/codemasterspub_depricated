@@ -4,6 +4,11 @@ const sensitiveDataHelper = require('./SensitiveDataHelper.js');
 
 let mailHelper = {};
 
+/**
+ * You can't send mail.
+ * the pass of mail account is not included.
+ */
+
 mailHelper.sendInviteMail = async function(toEmail , inviteCode , inviterUser ){
 
     console.log("sender user : " , inviterUser )
