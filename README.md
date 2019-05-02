@@ -35,7 +35,7 @@ Mutlaka katkı sağlayabileceğin bir konu vardır, iletişime geçebilirsin.
 - Bilgisayardaki MySQL Server 'ı çalıştırıp coderhub isimli bir veri tabanı şeması oluşturun.
 - Veritabanı için local isimli, şifresi boş bir kullanıcı oluşturun.
 - dbCreate.sql dosyasını açın, bu kodları kopyalayıp çalıştırın, bu şekilde DB oluşacaktır.
-- Terminal ile indirdiğiniz klasöre gibi 'npm install' komutunu çalıştırın.
+- Terminal ile indirdiğiniz klasöre gidip 'npm install' komutunu çalıştırın.
 - 'node bin/wwwcodemasterspub.js' komutu ile uygulamayı bşlatın.
 - Eğer her şey yolunda gittiyse localhost:3009 adresinden kendi bilgisayarınızda çalışan kopyaya ulaşabilirsiniz.
 
