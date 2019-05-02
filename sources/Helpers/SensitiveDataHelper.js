@@ -6,7 +6,7 @@ const sensitiveDataHelper = {}
 
 const mailCredits = {
     /**
-     * Empty body. Sensitive data here, will not be pushed...
+     * Empty body. Sensitive data here, will not be pushed!
      */
 }
 
