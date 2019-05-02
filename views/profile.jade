@@ -1,0 +1,139 @@
+extends topicLayout
+block content    
+	#content.col-md-12(tabindex='5001', style='overflow: hidden; outline: none; padding-left: 265px;')
+		// page header
+		.pageheader
+			h2
+				i.fa.fa-user(style='line-height: 46px;padding-left: 0;')
+				|  #{profileUser.name}
+				span
+
+		// /page header
+		// content main container
+		.main
+			// row
+			.row
+				// col 4
+				.col-md-8
+					// tile
+					section.tile.transparent
+						// tile header
+						.tile-header.nopadding
+							//.controls
+								a.minimize(href='#')
+									i.fa.fa-chevron-down
+								a.refresh(href='#')
+									i.fa.fa-refresh
+								a.remove(href='#')
+									i.fa.fa-times
+						// /tile header
+						// tile widget
+						.tile-widget.color.transparent-white.rounded-top-corners
+							.user-card
+								h3
+									strong #{profileUser.name}
+								//ul.profile-controls.inline
+									li.mailto
+										a(href='#')
+											i.fa.fa-envelope
+											|  Send Email
+									li.avatar
+										img.img-circle.profile-photo(src='/assets/images/profile-photo.jpg', alt='')
+									li#make-call.callto
+										a(href='#')
+											span.call
+												| Call
+												i.fa.fa-phone
+											span.calling
+												| Calling...
+												i.fa.fa-microphone
+								//h5 Chief Designer
+								//.social-networks
+									a(href='#')
+										i.fa.fa-facebook-square
+									a(href='#')
+										i.fa.fa-google-plus-square
+									a(href='#')
+										i.fa.fa-twitter
+									a(href='#')
+										i.fa.fa-github-square
+									a(href='#')
+										i.fa.fa-dribbble
+						// /tile widget
+						// tile body
+						.tile-body.color.transparent-black.textured.rounded-bottom-corners
+							ul.inline.divided.social-feed
+								li
+									h4 -
+									|                         Gönderi Sayısı
+								li
+									h4 -
+									|                         Yukarı Oy Sayısı
+								li
+									h4 -
+									|                         Başlık Sayısı
+						// /tile body
+						// /tile
+						// tile
+						section.tile.color.transparent-black
+							// tile header
+							.tile-header
+								h1
+									strong Hakkında
+								//.controls
+									a.minimize(href='#')
+										i.fa.fa-chevron-down
+									a.refresh(href='#')
+										i.fa.fa-refresh
+									a.remove(href='#')
+										i.fa.fa-times
+							// /tile header
+							// tile body
+							.tile-body.padding-top-0
+								if user != undefined && user.iduser == profileUser.iduser
+									form.form-horizontal( action='/user' ,method='post' )
+										//section
+											textarea.form-control(  rows='10', type='text', name='bio', placeholder=' kendin hakkında bir şeyler yaz.. ' )
+												| #{user.bio}
+
+										.form-group
+											.col-sm-12
+												input.form-control(type='text' , name='bio' , id='bio', placeholder='kendin hakkında birşeyler yaz..' , value=user.bio )
+
+										.form-group.form-footer
+											.col-sm-offset-10.col-sm-8
+												button.btn.btn-default(type='submit') Kaydet
+
+								else
+									p.about-me
+										| #{profileUser.bio}
+			if user != undefined && user.iduser == profileUser.iduser
+				.row
+					// col 12
+					.col-md-8
+						// tile
+						section.tile.color.transparent-black
+							// tile header
+							.tile-header
+								h1
+									strong Davetiye Gönder
+								//.controls
+									a.minimize(href='#')
+										i.fa.fa-chevron-down
+									a.refresh(href='#')
+										i.fa.fa-refresh
+									a.remove(href='#')
+										i.fa.fa-times
+							// /tile header
+							// tile body
+							.tile-body
+								form.form-horizontal( action='/user/invite' method='post' )
+									.form-group
+										label.col-sm-4.control-label(for='input01') Davetiye için e posta adresi
+										.col-sm-8
+											input#input01.form-control(type='text' , name='email')
+									.form-group.form-footer
+										.col-sm-offset-10.col-sm-8
+											button.btn.btn-default(type='submit') Gönder
+
+

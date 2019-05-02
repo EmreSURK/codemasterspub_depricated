@@ -1,0 +1,64 @@
+extends topicLayout
+block content
+	#content.col-md-12
+		// page header
+		.pageheader
+			h2
+				i.fa.fa-clock-o(style='line-height: 48px;padding-left: 0;')
+				if topic != undefined
+					| #{topic.title || ""}
+					span   #{topic.user.nick || "" }
+				else
+					| Öne Çıkan Konular
+			//.breadcrumbs
+				ol.breadcrumb
+					li You are here
+					li
+						a(href='index.html') Minimal
+					li
+						a(href='#') Example Pages
+					li.active CodeMastersPub
+
+		.main
+			.row
+				.col-md-10.text-center
+					h1.timeline-heading
+						strong gönderiler
+					ol.timeline
+						if topic != undefined
+							each post in topic.posts
+								li.full-width
+									.el-container.full-width
+										.content
+											//span.time
+												i.fa.fa-clock-o
+												|  Yesterday, 10:18am
+											h1
+												a(href='/user/#{post.user.iduser}')= post.user.name
+											p= post.text
+						else 
+							each topic in demoTopics
+								if topic.posts.length > 0
+									li.full-width
+										.el-container.full-width
+											.content
+												//span.time
+													i.fa.fa-clock-o
+													| .
+												h1= topic.title + " - " + topic.posts[0].user.name
+												p= topic.posts[0].text
+					h1.timeline-heading
+						strong gönderiler
+			.row
+				if user != undefined && topic != undefined
+					form( action='/post' ,method='post' )
+						input( type='hidden' , name='idtopic' , value='#{topic.idtopic}' )
+						section
+							//.col-sm-1
+							//.col-sm-8
+							textarea.form-control(  rows='10', type='text', name='content', placeholder='konuya açıklık getir..' )
+						//.form-group.form-footer
+						//.col-sm-8
+						//.col-sm-1
+						section
+							button.btn.btn-default(type='submit') Gönder

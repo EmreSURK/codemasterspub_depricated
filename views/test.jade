@@ -1,0 +1,1538 @@
+doctype html
+html
+head
+	title Minimal 1.3 - Timeline
+	| &#x9;
+	meta(name='viewport', content='width=device-width, initial-scale=1.0')
+	| &#x9;
+	meta(charset='UTF-8')
+	| &#x9;
+	| &#x9;
+	link(rel='icon', type='image/ico', href='./assets/images/favicon.ico')
+	// Bootstrap
+	link(href='./assets/css/vendor/bootstrap/bootstrap.min.css', rel='stylesheet')
+	| &#x9;
+	link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
+	| &#x9;
+	link(rel='stylesheet', href='./assets/css/vendor/animate/animate.css')
+	| &#x9;
+	link(type='text/css', rel='stylesheet', media='all', href='./assets/js/vendor/mmenu/css/jquery.mmenu.all.css')
+	| &#x9;
+	link(rel='stylesheet', href='./assets/js/vendor/videobackground/css/jquery.videobackground.css')
+	| &#x9;
+	link(rel='stylesheet', href='./assets/css/vendor/bootstrap-checkbox.css')
+	| &#x9;
+	link(rel='stylesheet', href='./assets/css/vendor/bootstrap/bootstrap-dropdown-multilevel.css')
+	| &#x9;
+	| &#x9;
+	link(href='./assets/css/minimal.css', rel='stylesheet')
+	// HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+	// WARNING: Respond.js doesn't work if you view the page via file://
+	//if lt IE 9
+		script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+		| &#x9;
+		script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+body.bg-1
+	// Preloader
+	.mask
+		#loader
+	// /Preloader
+	// Wrap all page content here
+	#wrap
+		// Make page fluid
+		.row
+			// Fixed navbar
+			#navbar.navbar.navbar-default.navbar-fixed-top.navbar-transparent-black.mm-fixed-top(role='navigation')
+				// Branding
+				.navbar-header.col-md-2
+					a.navbar-brand(href='index.html')
+						strong MIN
+						| IMAL
+					| &#x9;&#x9;&#x9;&#x9;
+					.sidebar-collapse
+						a(href='#')
+							i.fa.fa-bars
+				// Branding end
+				// .nav-collapse
+				.navbar-collapse
+					// Page refresh
+					ul.nav.navbar-nav.refresh
+						li.divided
+							a.page-refresh(href='#')
+								i.fa.fa-refresh
+					// /Page refresh
+					// Search
+					#main-search.search
+						i.fa.fa-search
+						|
+						input(type='text', placeholder='Search...')
+					// Search end
+					// Quick Actions
+					ul.nav.navbar-nav.quick-actions
+						li.dropdown.divided
+							a.dropdown-toggle.button(data-toggle='dropdown', href='#')
+								i.fa.fa-tasks
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								span.label.label-transparent-black 2
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							ul.dropdown-menu.wide.arrow.nopadding.bordered
+								li
+									h1
+										| You have
+										strong 2
+										|  new tasks
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										.task-info
+											.desc Layout
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.percent 80%
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.progress.progress-striped.progress-thin
+											.progress-bar.progress-bar-green(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
+												span.sr-only 40% Complete (success)
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										.task-info
+											.desc Schemes
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.percent 15%
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.progress.progress-striped.active.progress-thin
+											.progress-bar.progress-bar-cyan(role='progressbar', aria-valuenow='45', aria-valuemin='0', aria-valuemax='100', style='width: 15%')
+												span.sr-only 45% Complete
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										.task-info
+											.desc Forms
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.percent 5%
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.progress.progress-striped.progress-thin
+											.progress-bar.progress-bar-orange(role='progressbar', aria-valuenow='45', aria-valuemin='0', aria-valuemax='100', style='width: 5%')
+												span.sr-only 5% Complete (warning)
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										.task-info
+											.desc JavaScript
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.percent 30%
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.progress.progress-striped.progress-thin
+											.progress-bar.progress-bar-red(role='progressbar', aria-valuenow='45', aria-valuemin='0', aria-valuemax='100', style='width: 30%')
+												span.sr-only 30% Complete (danger)
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										.task-info
+											.desc Dropdowns
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.percent 60%
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.progress.progress-striped.progress-thin
+											.progress-bar.progress-bar-amethyst(role='progressbar', aria-valuenow='45', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
+												span.sr-only 60% Complete
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										| Check all tasks
+										i.fa.fa-angle-right
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						li.dropdown.divided
+							a.dropdown-toggle.button(data-toggle='dropdown', href='#')
+								i.fa.fa-envelope
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								span.label.label-transparent-black 1
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							ul.dropdown-menu.wider.arrow.nopadding.messages
+								li
+									h1
+										| You have
+										strong 1
+										|  new message
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a.cyan(href='#')
+										.profile-photo
+											img(src='./assets/images/ici-avatar.jpg', alt='')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.message-info
+											span.sender Ing. Imrich Kamarel
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											span.time 12 mins
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.message-content Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a.green(href='#')
+										.profile-photo
+											img(src='./assets/images/arnold-avatar.jpg', alt='')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.message-info
+											span.sender Arnold Karlsberg
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											span.time 1 hour
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.message-content Lorem ipsum dolor sit amet, consectetur adipisicing elit
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										.profile-photo
+											img(src='./assets/images/profile-photo.jpg', alt='')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.message-info
+											span.sender John Douey
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											span.time 3 hours
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.message-content Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a.red(href='#')
+										.profile-photo
+											img(src='./assets/images/peter-avatar.jpg', alt='')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.message-info
+											span.sender Peter Kay
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											span.time 5 hours
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.message-content Ut enim ad minim veniam, quis nostrud exercitation
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a.orange(href='#')
+										.profile-photo
+											img(src='./assets/images/george-avatar.jpg', alt='')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.message-info
+											span.sender George McCain
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											span.time 6 hours
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											.message-content Lorem ipsum dolor sit amet, consectetur adipisicing elit
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.topborder
+									a(href='#')
+										| Check all messages
+										i.fa.fa-angle-right
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						li.dropdown.divided
+							a.dropdown-toggle.button(data-toggle='dropdown', href='#')
+								i.fa.fa-bell
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								span.label.label-transparent-black 3
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							ul.dropdown-menu.wide.arrow.nopadding.bordered
+								li
+									h1
+										| You have
+										strong 3
+										|  new notifications
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										span.label.label-green
+											i.fa.fa-user
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New user registered.
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.small 18 mins
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										span.label.label-red
+											i.fa.fa-power-off
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Server down.
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.small 27 mins
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										span.label.label-orange
+											i.fa.fa-plus
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;New order.
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.small 36 mins
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										span.label.label-cyan
+											i.fa.fa-power-off
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Server restared.
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.small 45 mins
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										span.label.label-amethyst
+											i.fa.fa-power-off
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Server started.
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.small 50 mins
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										| Check all notifications
+										i.fa.fa-angle-right
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						li#current-user.dropdown.divided.user
+							.profile-photo
+								img(src='./assets/images/profile-photo.jpg', alt='')
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							a.dropdown-toggle.options(data-toggle='dropdown', href='#')
+								| John Douey
+								i.fa.fa-caret-down
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							ul.dropdown-menu.arrow.settings
+								li
+									h3 Backgrounds:
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									ul#color-schemes
+										li
+											a.bg-1(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.bg-2(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.bg-3(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.bg-4(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.bg-5(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.bg-6(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li.title Solid Backgrounds:
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.solid-bg-1(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.solid-bg-2(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.solid-bg-3(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.solid-bg-4(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.solid-bg-5(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.solid-bg-6(href='#')
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.divider
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									.form-group.videobg-check
+										label.col-xs-8.control-label Video BG
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.col-xs-4.control-label
+											.onoffswitch.greensea.small
+												input#videobg-check.onoffswitch-checkbox(type='checkbox', name='onoffswitch')
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												label.onoffswitch-label(for='videobg-check')
+													span.onoffswitch-inner
+													| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+													span.onoffswitch-switch
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									ul#videobackgrounds
+										li.title Choose type:
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-1(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-2(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-3(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-4(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-5(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-6(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-7(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-8(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-9(href='#')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a.video-bg-10(href='#')
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.divider
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										i.fa.fa-user
+										|  Profile
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										i.fa.fa-calendar
+										|  Calendar
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										i.fa.fa-envelope
+										|  Inbox
+										span#user-inbox.badge.badge-red 3
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.divider
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='#')
+										i.fa.fa-power-off
+										|  Logout
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						li
+							a(href='#mmenu')
+								i.fa.fa-comments
+					// /Quick Actions
+					// Sidebar
+					ul#sidebar.nav.navbar-nav.side-nav
+						li.collapsed-content
+							ul
+								li.search
+									// Collapsed search pasting here at 768px
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						li#navigation.navigation
+							a.sidebar-toggle(href='#', data-toggle='#navigation')
+								| Navigation
+								i.fa.fa-angle-up
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							ul.menu
+								li
+									a(href='index.html')
+										i.fa.fa-tachometer
+										|  Dashboard
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-red 1
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.dropdown
+									a.dropdown-toggle(href='#', data-toggle='dropdown')
+										i.fa.fa-list
+										|  Forms
+										b.fa.fa-plus.dropdown-plus
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									ul.dropdown-menu
+										li
+											a(href='form-elements.html')
+												i.fa.fa-caret-right
+												|  Common Elements
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='validation-elements.html')
+												i.fa.fa-caret-right
+												|  Validation
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='form-wizard.html')
+												i.fa.fa-caret-right
+												|  Form Wizard
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.dropdown
+									a.dropdown-toggle(href='#', data-toggle='dropdown')
+										i.fa.fa-pencil
+										|  Interface
+										b.fa.fa-plus.dropdown-plus
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									ul.dropdown-menu
+										li
+											a(href='ui-elements.html')
+												i.fa.fa-caret-right
+												|  UI Elements
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='typography.html')
+												i.fa.fa-caret-right
+												|  Typography
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='tiles.html')
+												i.fa.fa-caret-right
+												|  Tiles
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='portlets.html')
+												i.fa.fa-caret-right
+												|  Portlets
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='nestable.html')
+												i.fa.fa-caret-right
+												|  Nestable Lists
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='buttons.html')
+										i.fa.fa-tint
+										|  Buttons &amp; Icons
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='grid.html')
+										i.fa.fa-th
+										|  Grid Layout
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.dropdown
+									a.dropdown-toggle(href='#', data-toggle='dropdown')
+										i.fa.fa-th-large
+										|  Tables
+										b.fa.fa-plus.dropdown-plus
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									ul.dropdown-menu
+										li
+											a(href='tables.html')
+												i.fa.fa-caret-right
+												|  Bootstrap Tables
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='datatables.html')
+												i.fa.fa-caret-right
+												|  DataTables
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.dropdown.open.active
+									a.dropdown-toggle(href='#', data-toggle='dropdown')
+										i.fa.fa-desktop
+										|  Example Pages
+										b.fa.fa-plus.dropdown-plus
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.label.label-greensea mails
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									ul.dropdown-menu
+										li
+											a(href='login.html')
+												i.fa.fa-caret-right
+												|  Login Page
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='calendar.html')
+												i.fa.fa-caret-right
+												|  Calendar
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='page404.html')
+												i.fa.fa-caret-right
+												|  Page 404
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='page500.html')
+												i.fa.fa-caret-right
+												|  Page 500
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='page-offline.html')
+												i.fa.fa-caret-right
+												|  Page Offline
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='invoice.html')
+												i.fa.fa-caret-right
+												|  Invoice
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='blank-page.html')
+												i.fa.fa-caret-right
+												|  Blank Page
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='locked-screen.html')
+												i.fa.fa-caret-right
+												|  Locked Screen
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='gallery.html')
+												i.fa.fa-caret-right
+												|  Gallery
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li.active
+											a(href='timeline.html')
+												i.fa.fa-caret-right
+												|  Timeline
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='chat.html')
+												i.fa.fa-caret-right
+												|  Chat
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='search-results.html')
+												i.fa.fa-caret-right
+												|  Search Results
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+										li
+											a(href='profile-page.html')
+												i.fa.fa-caret-right
+												|  Profile Page
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='weather-page.html')
+												i.fa.fa-caret-right
+												|  Weather Page
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='frontpage/index.html')
+												i.fa.fa-caret-right
+												|  Front Page
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea new
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='mail.html')
+												i.fa.fa-caret-right
+												|  Vertical Mail
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.badge.badge-red 5
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='mail-horizontal.html')
+												i.fa.fa-caret-right
+												|  Horizontal Mail
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.label.label-greensea mails
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='vector-maps.html')
+												i.fa.fa-caret-right
+												|  Vector Maps
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li
+											a(href='google-maps.html')
+												i.fa.fa-caret-right
+												|  Google Maps
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='widgets.html')
+										i.fa.fa-play-circle
+										|  Widgets
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li
+									a(href='charts.html')
+										i.fa.fa-bar-chart-o
+										|  Charts &amp; Graphs
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.dropdown
+									a.dropdown-toggle(href='#', data-toggle='dropdown')
+										i.fa.fa-folder
+										|  Menu Levels
+										b.fa.fa-plus.dropdown-plus
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.label.label-cyan new
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									ul.dropdown-menu
+										li
+											a(href='#')
+												i.fa.fa-caret-right
+												|  Menu Level 1.1
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li.dropdown
+											a.dropdown-toggle(href='#', data-toggle='dropdown')
+												i.fa.fa-folder
+												|  Menu Level 1.2
+												b.fa.fa-plus.dropdown-plus
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											ul.dropdown-menu
+												li
+													a(href='#')
+														i.fa.fa-caret-right
+														|  Menu Level 2.1
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												li
+													a(href='#')
+														i.fa.fa-caret-right
+														|  Menu Level 2.2
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												li.dropdown
+													a.dropdown-toggle(href='#', data-toggle='dropdown')
+														i.fa.fa-folder
+														|  Menu Level 2.3
+														b.fa.fa-plus.dropdown-plus
+													| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+													ul.dropdown-menu
+														li
+															a(href='#')
+																i.fa.fa-caret-right
+																|  Menu Level 3.1
+														| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+														li
+															a(href='#')
+																i.fa.fa-caret-right
+																|  Menu Level 3.2
+														| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+														li.dropdown
+															a.dropdown-toggle(href='#', data-toggle='dropdown')
+																i.fa.fa-folder
+																|  Menu Level 3.3
+																b.fa.fa-plus.dropdown-plus
+															| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+															ul.dropdown-menu
+																li
+																	a(href='#')
+																		i.fa.fa-caret-right
+																		|  Menu Level 4.1
+																| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+																li.dropdown
+																	a.dropdown-toggle(href='#', data-toggle='dropdown')
+																		i.fa.fa-folder
+																		|  Menu Level 4.2
+																		b.fa.fa-plus.dropdown-plus
+																	| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+																	ul.dropdown-menu
+																		li
+																			a(href='#')
+																				i.fa.fa-caret-right
+																				|  Menu Level 5.1
+																		| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+																		li
+																			a(href='#')
+																				i.fa.fa-caret-right
+																				|  Menu Level 5.2
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										li.dropdown
+											a.dropdown-toggle(href='#', data-toggle='dropdown')
+												i.fa.fa-folder
+												|  Menu Level 1.3
+												b.fa.fa-plus.dropdown-plus
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											ul.dropdown-menu
+												li
+													a(href='#')
+														i.fa.fa-caret-right
+														|  Menu Level 2.1
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												li
+													a(href='#')
+														i.fa.fa-caret-right
+														|  Menu Level 2.2
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												li.dropdown
+													a.dropdown-toggle(href='#', data-toggle='dropdown')
+														i.fa.fa-folder
+														|  Menu Level 2.3
+														b.fa.fa-plus.dropdown-plus
+													| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+													ul.dropdown-menu
+														li
+															a(href='#')
+																i.fa.fa-caret-right
+																|  Menu Level 3.1
+														| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+														li
+															a(href='#')
+																i.fa.fa-caret-right
+																|  Menu Level 3.2
+														| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+														li
+															a(href='#')
+																i.fa.fa-caret-right
+																|  Menu Level 3.3
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						li#order-summary.summary
+							a.sidebar-toggle.underline(href='#', data-toggle='#order-summary')
+								| Orders Summary
+								i.fa.fa-angle-up
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							.media
+								a.pull-right(href='#')
+									span#sales-chart
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| This week sales
+								h3.media-heading 26, 149
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							.media
+								a.pull-right(href='#')
+									span#balance-chart
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								.media-body
+									| This week balance
+									h3.media-heading 318, 651
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						li#general-settings.settings
+							a.sidebar-toggle.underline(href='#', data-toggle='#general-settings')
+								| General Settings
+								i.fa.fa-angle-up
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							.form-group
+								label.col-xs-8.control-label Switch ON
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								.col-xs-4.control-label
+									.onoffswitch.greensea
+										input#switch-on.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										label.onoffswitch-label(for='switch-on')
+											span.onoffswitch-inner
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											span.onoffswitch-switch
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							.form-group
+								label.col-xs-8.control-label Switch OFF
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								.col-xs-4.control-label
+									.onoffswitch.greensea
+										input#switch-off.onoffswitch-checkbox(type='checkbox', name='onoffswitch')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										label.onoffswitch-label(for='switch-off')
+											span.onoffswitch-inner
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											span.onoffswitch-switch
+					// Sidebar end
+				// /.nav-collapse
+			// Fixed navbar end
+			// Page content
+			#content.col-md-12
+				// page header
+				.pageheader
+					h2
+						i.fa.fa-clock-o(style='line-height: 48px;padding-left: 0;')
+						|  Timeline
+						span // Place subtitle here...
+					| &#x9;&#x9;&#x9;&#x9;
+					| &#x9;&#x9;&#x9;&#x9;
+					| &#x9;&#x9;&#x9;&#x9;
+					.breadcrumbs
+						ol.breadcrumb
+							li You are here
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li
+								a(href='index.html') Minimal
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li
+								a(href='#') Example Pages
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.active Timeline
+				// /page header
+				// content main container
+				.main
+					// row
+					.row
+						// col 12
+						.col-md-12.text-center.sm-left
+							h1.timeline-heading
+								strong This
+								|  month
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							ol.timeline
+								li.color.transparent-black
+									.pointer.slategray
+										i.fa.fa-compass
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.el-container
+										.side.bg-greensea
+											i.fa.fa-user
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.content
+											span.time
+												i.fa.fa-clock-o
+												|  Today, 04:24pm
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											h1
+												strong Left Side
+												|  Icon
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.color.transparent-black.textured
+									.pointer.slategray
+										i.fa.fa-calendar
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.el-container
+										.content
+											span.time
+												i.fa.fa-clock-o
+												|  Today, 03:15pm
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											h1
+												strong Right Side
+												|  Icon
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+												| ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+												| aliqua.
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.side
+											i.fa.fa-cog
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.color.transparent-white
+									.pointer.slategray
+										i.fa.fa-clock-o
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.el-container
+										.side
+											img(src='./assets/images/carousel/carousel1.jpg', alt='')
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.content
+											span.time
+												i.fa.fa-clock-o
+												|  Today, 03:12pm
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											h1
+												strong Left Side
+												|  Image
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+												| ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.color.transparent-black
+									.pointer.slategray
+										i.fa.fa-coffee
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.el-container
+										.content
+											span.time
+												i.fa.fa-clock-o
+												|  Today, 01:55pm
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											h1
+												strong Right Side
+												|  Image
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+												| ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										.side
+											img(src='./assets/images/carousel/carousel2.jpg', alt='')
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.color.transparent-black
+									.pointer.slategray
+										i.fa.fa-envelope
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.el-container
+										.content
+											span.time
+												i.fa.fa-clock-o
+												|  Yesterday, 18:40pm
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											h1
+												strong Top
+												|  Icon
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											i.fa.fa-info-circle.block
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+												| ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.color.transparent-white
+									.pointer.slategray
+										i.fa.fa-comments
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.el-container
+										.content
+											span.time
+												i.fa.fa-clock-o
+												|  Yesterday, 22:12pm
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											h1
+												strong Bottom
+												|  Image
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+												| ullamco laboris nisi ut aliquip ex ea commodo consequat.
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											img(src='./assets/images/carousel/carousel3.jpg', alt='')
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.color.red
+									.pointer.red
+										i.fa.fa-heart
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.el-container
+										.content
+											span.time
+												i.fa.fa-clock-o
+												|  Yesterday, 13:22pm
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											h1 Colored Element
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+												| ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+								li.full-width
+									.pointer.slategray
+										i.fa.fa-question-circle
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.el-container
+										.content
+											span.time
+												i.fa.fa-clock-o
+												|  Yesterday, 10:18am
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											h1 Full-Width Element
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											p
+												| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+												| ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+												| occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							h1.timeline-heading
+								strong Older
+						// /col 12
+					// /row
+				// /content container
+			// Page content end
+			#mmenu.right-panel
+				// Nav tabs
+				ul.nav.nav-tabs.nav-justified
+					li.active
+						a(href='#mmenu-users', data-toggle='tab')
+							i.fa.fa-users
+					| &#x9;&#x9;&#x9;&#x9;
+					li
+						a(href='#mmenu-history', data-toggle='tab')
+							i.fa.fa-clock-o
+					| &#x9;&#x9;&#x9;&#x9;
+					li
+						a(href='#mmenu-friends', data-toggle='tab')
+							i.fa.fa-heart
+					| &#x9;&#x9;&#x9;&#x9;
+					li
+						a(href='#mmenu-settings', data-toggle='tab')
+							i.fa.fa-gear
+				// Tab panes
+				.tab-content
+					#mmenu-users.tab-pane.active
+						h5
+							strong Online
+							|  Users
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						ul.users-list
+							li.online
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/ici-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Ing. Imrich
+											strong Kamarel
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Ulaanbaatar, Mongolia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.online
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/arnold-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									span.badge.badge-red.unread 3
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Arnold
+											strong Karlsberg
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Bratislava, Slovakia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.online
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/peter-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Peter
+											strong Kay
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Kosice, Slovakia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.online
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/george-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| George
+											strong McCain
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Prague, Czech Republic
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.busy
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar1.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Lucius
+											strong Cashmere
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Wien, Austria
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.busy
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar2.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Jesse
+											strong Phoenix
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Berlin, Germany
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						h5
+							strong Offline
+							|  Users
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						ul.users-list
+							li.offline
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar4.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Dell
+											strong MacApple
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Paris, France
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.offline
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar5.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Roger
+											strong Flopple
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Rome, Italia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.offline
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar6.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Nico
+											strong Vulture
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Kyjev, Ukraine
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.offline
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar7.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Bobby
+											strong Socks
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Moscow, Russia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.offline
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar8.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Anna
+											strong Opichia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Budapest, Hungary
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+					| &#x9;&#x9;&#x9;&#x9;
+					| &#x9;&#x9;&#x9;&#x9;
+					#mmenu-history.tab-pane
+						h5
+							strong Chat
+							|  History
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						ul.history-list
+							li.online
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/ici-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Ing. Imrich
+											strong Kamarel
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.busy
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/arnold-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									span.badge.badge-red.unread 3
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Arnold
+											strong Karlsberg
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.offline
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/peter-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Peter
+											strong Kay
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											| Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+					| &#x9;&#x9;&#x9;&#x9;
+					| &#x9;&#x9;&#x9;&#x9;
+					#mmenu-friends.tab-pane
+						h5
+							strong Friends
+							|  List
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						ul.favourite-list
+							li.online
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/arnold-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									span.badge.badge-red.unread 3
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Arnold
+											strong Karlsberg
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Bratislava, Slovakia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.offline
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar8.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Anna
+											strong Opichia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Budapest, Hungary
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.busy
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/random-avatar1.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Lucius
+											strong Cashmere
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Wien, Austria
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li.online
+								.media
+									a.pull-left.profile-photo(href='#')
+										img.media-object(src='./assets/images/ici-avatar.jpg', alt='')
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.media-body
+										h6.media-heading
+											| Ing. Imrich
+											strong Kamarel
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										small
+											i.fa.fa-map-marker
+											|  Ulaanbaatar, Mongolia
+										| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+										span.badge.badge-outline.status
+					| &#x9;&#x9;&#x9;&#x9;
+					| &#x9;&#x9;&#x9;&#x9;
+					#mmenu-settings.tab-pane.pane-settings
+						h5
+							strong Chat
+							|  Settings
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						| &#x9;&#x9;&#x9;&#x9;&#x9;
+						ul.settings
+							li
+								.form-group
+									label.col-xs-8.control-label Show Offline Users
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.col-xs-4.control-label
+										.onoffswitch.greensea
+											input#show-offline.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='')
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											label.onoffswitch-label(for='show-offline')
+												span.onoffswitch-inner
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.onoffswitch-switch
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li
+								.form-group
+									label.col-xs-8.control-label Show Fullname
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.col-xs-4.control-label
+										.onoffswitch.greensea
+											input#show-fullname.onoffswitch-checkbox(type='checkbox', name='onoffswitch')
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											label.onoffswitch-label(for='show-fullname')
+												span.onoffswitch-inner
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.onoffswitch-switch
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li
+								.form-group
+									label.col-xs-8.control-label History Enable
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.col-xs-4.control-label
+										.onoffswitch.greensea
+											input#show-history.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='')
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											label.onoffswitch-label(for='show-history')
+												span.onoffswitch-inner
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.onoffswitch-switch
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li
+								.form-group
+									label.col-xs-8.control-label Show Locations
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.col-xs-4.control-label
+										.onoffswitch.greensea
+											input#show-location.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='')
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											label.onoffswitch-label(for='show-location')
+												span.onoffswitch-inner
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.onoffswitch-switch
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li
+								.form-group
+									label.col-xs-8.control-label Notifications
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.col-xs-4.control-label
+										.onoffswitch.greensea
+											input#show-notifications.onoffswitch-checkbox(type='checkbox', name='onoffswitch')
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											label.onoffswitch-label(for='show-notifications')
+												span.onoffswitch-inner
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.onoffswitch-switch
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+							li
+								.form-group
+									label.col-xs-8.control-label Show Undread Count
+									| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+									.col-xs-4.control-label
+										.onoffswitch.greensea
+											input#show-unread.onoffswitch-checkbox(type='checkbox', name='onoffswitch', checked='')
+											| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+											label.onoffswitch-label(for='show-unread')
+												span.onoffswitch-inner
+												| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+												span.onoffswitch-switch
+					// tab-pane
+				// tab-content
+		// Make page fluid
+	// Wrap all page content end
+	section#video.videocontent
+	// jQuery (necessary for Bootstrap's JavaScript plugins)
+	script(src='https://code.jquery.com/jquery.js')
+	// Include all compiled plugins (below), or include individual files as needed
+	script(src='./assets/js/vendor/bootstrap/bootstrap.min.js')
+	script(src='./assets/js/vendor/bootstrap/bootstrap-dropdown-multilevel.js')
+	script(src='https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sons-of-obsidian')
+	script(type='text/javascript', src='./assets/js/vendor/mmenu/js/jquery.mmenu.min.js')
+	script(type='text/javascript', src='./assets/js/vendor/sparkline/jquery.sparkline.min.js')
+	script(type='text/javascript', src='./assets/js/vendor/nicescroll/jquery.nicescroll.min.js')
+	script(type='text/javascript', src='./assets/js/vendor/animate-numbers/jquery.animateNumbers.js')
+	script(type='text/javascript', src='./assets/js/vendor/videobackground/jquery.videobackground.js')
+	script(type='text/javascript', src='./assets/js/vendor/blockui/jquery.blockUI.js')
+	script(src='./assets/js/minimal.min.js')
+	script.
+		$(function () {
+		})

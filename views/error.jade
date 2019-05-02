@@ -1,0 +1,7 @@
+extends topicLayout
+
+block content
+  pre= message || ""
+  if error != undefined
+    h2= error.status
+    pre #{error.stack}

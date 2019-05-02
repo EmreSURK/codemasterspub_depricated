@@ -1,0 +1,55 @@
+doctype html
+html
+	head
+		title CoderPub
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(charset='UTF-8')
+		link(rel='icon', type='image/ico', href='assets/images/favicon.ico')
+		// Bootstrap
+		link(href='assets/css/vendor/bootstrap/bootstrap.min.css', rel='stylesheet')
+		link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
+		link(rel='stylesheet', href='assets/css/vendor/bootstrap-checkbox.css')
+		link(rel='stylesheet', href='assets/css/vendor/bootstrap/bootstrap-dropdown-multilevel.css')
+		link(href='assets/css/minimal.css', rel='stylesheet')
+		// HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		// WARNING: Respond.js doesn't work if you view the page via file://
+		//if lt IE 9
+			script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+			script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+	body.bg-1
+		#wrap
+			.row
+				#content.col-md-12.full-page.login
+					.inside-block
+						//img.logo(src='assets/images/logo-big.png', alt='')
+						h1
+							strong Giriş Yap
+						h5 Söyleceklerini duymak isteriz.
+						if error
+							br
+							br
+							br
+							.alert.alert-red
+								strong= error
+
+						form#form-signin.form-signin( action='/login' ,method='post' )
+							section
+								input(type="hidden" ,name='returnurl',value= returnurl )
+								.input-group
+									input.form-control(type='test', name='email', placeholder='e posta')
+									.input-group-addon
+										i.fa.fa-user
+								.input-group
+									input.form-control(type='password', name='password', placeholder='şifre')
+									.input-group-addon
+										i.fa.fa-key
+							section.controls
+								//.checkbox.check-transparent
+									input#remember(type='checkbox', value='1', checked='')
+									label(for='remember') Beni Hatırla
+								a(href='/login/lostpass') Şifreni mi unuttun?
+							section
+								button.btn.btn-greensea Giriş Yap
+							section.log-in
+								br
+								a.button.btn.btn-slategray(href='/register?returnurl=#{returnurl}') Kayıt Ol

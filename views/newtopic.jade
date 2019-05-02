@@ -1,0 +1,15 @@
+extends topicLayout
+block content
+	#content.col-md-12
+		// page header
+		.pageheader
+			h2 Yeni Başlık Aç
+			pre Var olan bir konuyu tekrar açarsan tatsız olur, iyice arama yaptığına emin ol lütfen.
+		.main
+			.row
+				if user != undefined
+					form( action='/post/newtopic' ,method='post' )
+						section
+							input.form-control(  rows='10', type='text', name='title', placeholder='Konu başlığı' )
+						section
+							button.btn.btn-default(type='submit') Oluştur

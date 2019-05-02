@@ -1,0 +1,28 @@
+ul.nav.navbar-nav.quick-actions
+	if user == undefined
+		li#current-user.divided.user
+			a.options( href='/login', id="loginButton" ) Giriş / Kayıt
+
+	else
+		li#current-user.dropdown.divided.user
+			.profile-photo
+				img(src='#{user.profile_path}', alt='')
+
+			a.dropdown-toggle.options(data-toggle='dropdown', href='#')
+				| #{user.name}
+				i.fa.fa-caret-down
+
+
+			ul.dropdown-menu.arrow.settings
+				li.divider
+				li
+					a(href='/user/#{user.iduser}')
+						i.fa.fa-user
+						|  Profil
+
+				li.divider
+				li
+					a(href='/logout')
+						i.fa.fa-power-off
+						|  Çıkış Yap
+

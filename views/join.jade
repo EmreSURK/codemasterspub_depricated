@@ -1,0 +1,63 @@
+doctype html
+html
+	head
+		title CoderPub
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(charset='UTF-8')
+		link(rel='icon', type='image/ico', href='/assets/images/favicon.ico')
+		// Bootstrap
+		link(href='/assets/css/vendor/bootstrap/bootstrap.min.css', rel='stylesheet')
+		link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet')
+		link(rel='stylesheet', href='/assets/css/vendor/bootstrap-checkbox.css')
+		link(rel='stylesheet', href='/assets/css/vendor/bootstrap/bootstrap-dropdown-multilevel.css')
+		link(href='/assets/css/minimal.css', rel='stylesheet')
+		// HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		// WARNING: Respond.js doesn't work if you view the page via file://
+		//if lt IE 9
+			script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+			script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+	body.bg-1
+		#wrap
+			.row
+				#content.col-md-12.full-page
+					.inside-block
+						//img.logo(src='/assets/images/logo-big.png', alt='')
+						h1
+							strong Hoşgeldin!
+						if error
+							br
+							br
+							br
+							.alert.alert-red
+								strong= error
+						p
+						p Artık bizimlesin!
+						form#form-signin.form-signin( action='/register/join' ,method='post' )
+							section
+								input( type='hidden' , name='invitecode' , id='invitecode' , value= invitecode )
+								.input-group
+									input.form-control(type='text', name='email', placeholder='e posta', value=email , readonly )
+									.input-group-addon
+										i.fa.fa-envelope
+								.input-group
+									input.form-control( type='text', name='name', placeholder='Ad Soyad (kısaltma olabilir, nick olmamalı )' , required=)
+									.input-group-addon
+										i.fa.fa-user
+								.input-group
+									input.form-control(type='password', name='password', placeholder='şifre' , required)
+									.input-group-addon
+										i.fa.fa-key
+								.input-group
+									input.form-control(type='password', name='passwordagain', placeholder='tekrar şifre' , required)
+									.input-group-addon
+										i.fa.fa-key
+							section.controls
+								//.checkbox.check-transparent
+									input#remember(type='checkbox', value='1', checked='')
+									label(for='remember') Beni Hatırla
+							section
+								br
+								button.btn.btn-greensea KAYIT OL
+								br
+							section.log-in
+								a.button.btn.btn-slategray(href='/')  İPTAL EDEREK SİTEYE GİT
